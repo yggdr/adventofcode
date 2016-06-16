@@ -1,5 +1,5 @@
 length, memlength, encodedlength, skip = 0, 0, 0, 0
-with open('input') as input:
+with open('../../input/day08/input') as input:
     for line in input:
         line = line.strip()[1:-1]
         memlength += len(line) + 2

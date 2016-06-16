@@ -33,7 +33,7 @@ def toggle_corrected(grid, i, j):
 
 def luminosity(on, off, toggle):
     grid = {(x, y): 0 for x in range(1000) for y in range(1000)}
-    with open('input') as fh:
+    with open('../../input/day06/input') as fh:
         for instruction in fh:
             head, endrange = instruction.split(' through ')
             if head.startswith('turn on'):

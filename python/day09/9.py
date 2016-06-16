@@ -12,7 +12,7 @@ def calcdistance(way, distances):
             total += distances[(way[pos + 1], city)]
     return total
 
-with open('input') as input:
+with open('../../input/day09/input') as input:
     distances = {}
     for line in input:
         from_, _, to, _, distance = line.split()
