@@ -2,7 +2,7 @@ orientation = 1j
 spot = 0
 visited = [spot]
 visited_twice = []
-with open('input') as inp:
+with open('../../input/day01/input') as inp:
     directions = inp.readline().strip().split(', ')
 
 for LR, *howfar in directions:

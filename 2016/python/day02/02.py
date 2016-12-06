@@ -16,7 +16,7 @@ strange_layout = {
 
 def decode():
     pos = 0
-    with open('input') as fh:
+    with open('../../input/day02/input') as fh:
         for seq in fh:
             seq = seq.strip()
             mapped = map(lambda x: (x[0], len(x)), re.findall(r'U+|R+|D+|L+', seq))
@@ -28,7 +28,7 @@ def decode():
 
 def decode_strange():
     pos = -2j
-    with open('input') as fh:
+    with open('../../input/day02/input') as fh:
         # fh = ['LUURULUR']
         for seq in fh:
             seq = seq.strip()

@@ -3,11 +3,11 @@ def are_valid(tris):
         s1, s2, s3 = sorted(map(int, tri.split()))
         yield s1 + s2 > s3
 
-with open('input') as tris:
+with open('../../input/day03/input') as tris:
     print(list(are_valid(tris)).count(True))
 
 new_list = []
-with open('input') as tris:
+with open('../../input/day03/input') as tris:
     try:
         while True:
             l1 = map(int, next(tris).split())
