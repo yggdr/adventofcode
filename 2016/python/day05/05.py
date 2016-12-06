@@ -1,9 +1,10 @@
 from itertools import count
 from random import randint
-from string import ascii_lowercase
+from string import ascii_lowercase, digits
 from hashlib import md5
 
 doorID = 'ffykfhsq'
+scramble = ascii_lowercase + digits
 
 def code(advanced=False):
     for i in count():
@@ -28,7 +29,7 @@ for pos, val in code(True):
         continue
     finally:
         if randint(0, 1500) == 0:
-            print(''.join(char if char != '_' else ascii_lowercase[randint(0, len(ascii_lowercase) - 1)] for char in passwd), end='\r')
+            print(''.join(char if char != '_' else scramble[randint(0, len(scramble) - 1)] for char in passwd), end='\r')
     if pos in unfilled:
         passwd[pos] = val
         unfilled.pop(unfilled.index(pos))
